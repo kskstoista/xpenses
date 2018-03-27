@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Penz</string>
+    <string name="Welcome">Üdvözlő szöveg helye</string>
+    <string name="kiadas">Kiadás oldal</string>
+    <string name="bevetel">Bevétel oldal</string>
+    <string name="osszesito">Összesítő helye</string>
+    <string name="reszletes_osszesito">Részletes összesítés</string>
+    <string name="send">Küldés</string>
+    <string name="reszletes_osszesito_helye">részletes összesítő helye</string>
+    <string name="osszeg">Összeg:</string>
+
+    <string name="country_prompt">Choose a country</string>
+    <string name="rogzites">Rögzités</string>
+    <string name="oldal">oldal</string>
+    <string name="megjegyzes">Megjegyzés:</string>
+    <string name="kategoria">Kategoria</string>
+    <string name="kategory">kategoria</string>
+
+    <string-array name="kiadas_lista">
+        <item>Lakbér</item>
+        <item>Kaja</item>
+        <item>Kurvák</item>
+        <item>Szorakozás</item>
+        <item>Tankolás</item>
+    </string-array>
+
+    <string-array name="bevetel_lista">
+        <item>Munkabér</item>
+        <item>Piszkos</item>
+        <item>Pótmunka</item>
+        <item>Lotto</item>
+    </string-array>
+
+
+</resources>
