@@ -33,7 +33,7 @@ public class Tranzakcio {
 
     public String toString() {
 
-        return this.tipus + ":" + this.megjegy + ":" + this.kategoria + ":" + this.osszeg;
+        return this.tipus + ":" + this.megjegy + ":" + this.kategoria + ":" + this.osszeg+"\n";
     }
 
     public Boolean getTipus() {
