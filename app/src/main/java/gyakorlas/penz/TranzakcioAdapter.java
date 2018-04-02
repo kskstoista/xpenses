@@ -30,7 +30,7 @@ public class TranzakcioAdapter extends RecyclerView.Adapter<TranzakcioAdapter.Vi
             // tipus = (TextView) v.findViewById(R.id.lista_osszeg);
             megjegyzes = (TextView) v.findViewById(R.id.lista_megjegyzes);
             kategoria = (TextView) v.findViewById(R.id.lista_kategoria);
-            datum = (TextView) v.findViewById(R.id.tw_datum);
+            //datum = (TextView) v.findViewById(R.id.tw_datum);
             osszeg = (TextView) v.findViewById(R.id.lista_osszeg);
         }
     }
@@ -66,7 +66,7 @@ public class TranzakcioAdapter extends RecyclerView.Adapter<TranzakcioAdapter.Vi
         }
         holder.megjegyzes.setText(c.getMegjegy());
         holder.kategoria.setText(c.getKategoria());
-        holder.datum.setText(c.getDatum());
+        //holder.datum.setText(c.getDatum());
         holder.osszeg.setText(c.getOsszeg() + " ");
     }
 

@@ -46,14 +46,12 @@ public class Tranzakcio {
     public String getMegjegy() {
         return megjegy;
     }
-
     public String getKategoria() {
         return kategoria;
     }
     public String getDatum(){
         return datum;
     }
-
     public int getOsszeg() {
         return osszeg;
     }

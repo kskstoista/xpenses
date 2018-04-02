@@ -21,7 +21,7 @@ public class FileMuvelet {
 
     public static void Kiir(Tranzakcio tr, Context ctx){
         try {
-            FileOutputStream fos = ctx.openFileOutput("file1", Context.MODE_APPEND);
+            FileOutputStream fos = ctx.openFileOutput("file197", Context.MODE_APPEND);
             fos.write(tr.toString().getBytes());
             fos.close();
         }catch (Exception e ){
@@ -37,11 +37,11 @@ public class FileMuvelet {
         ArrayList<Tranzakcio> tranzakcioLista = new ArrayList<Tranzakcio>();
 
         try {
-            FileInputStream fis = ctx.openFileInput("file1");
+            FileInputStream fis = ctx.openFileInput("file197");
             BufferedReader reader = new BufferedReader(new InputStreamReader(fis));
             if (fis!=null) {
                 while ((Read = reader.readLine()) != null) {
-                    Log.e("While cikélus legelej: ", Read);
+                    Log.e("While cikélus legelej", Read);
                     Tranzakcio tr = new Tranzakcio(Read);
                     tranzakcioLista.add(tr);
                     Log.e("olvastunk valamittttt", tr.toString());
