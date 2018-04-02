@@ -9,12 +9,14 @@ public class Tranzakcio {
     private Boolean tipus;
     private String megjegy;
     private String kategoria;
+    private String datum;
     private int osszeg;
 
-    public Tranzakcio(Boolean tipus, String megjegyzes, String spinerEredmeny, int osszeg) {
+    public Tranzakcio(Boolean tipus, String megjegyzes, String spinerEredmeny, String datum, int osszeg) {
         this.tipus = tipus;
         this.megjegy = megjegyzes;
         this.kategoria = spinerEredmeny;
+        this.datum = datum;
         this.osszeg = osszeg;
     }
 
@@ -28,12 +30,13 @@ public class Tranzakcio {
         }
         this.megjegy = elements[1];
         this.kategoria = elements[2];
-        this.osszeg = Integer.parseInt(elements[3]);
+        this.datum = elements[3];
+        this.osszeg = Integer.parseInt(elements[4]);
     }
 
     public String toString() {
 
-        return this.tipus + ":" + this.megjegy + ":" + this.kategoria + ":" + this.osszeg+"\n";
+        return this.tipus + ":" + this.megjegy + ":" + this.kategoria + ":" + this.datum + ":" + this.osszeg+"\n";
     }
 
     public Boolean getTipus() {
@@ -46,6 +49,9 @@ public class Tranzakcio {
 
     public String getKategoria() {
         return kategoria;
+    }
+    public String getDatum(){
+        return datum;
     }
 
     public int getOsszeg() {

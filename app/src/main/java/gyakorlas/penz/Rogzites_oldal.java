@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -23,12 +24,14 @@ public class Rogzites_oldal extends AppCompatActivity {
     @BindView(R.id.et_kiegeszito_megjegy)
     EditText megjegy;
     EditText osszeg;
+    TextView datum;
 
     private Boolean tranzakcioTipus;
     private Button button;
     public static final String prefName = "nev";
     public static final String prefTipus = "tipus";
     public static final String prefmegjegy = "megjegyzes";
+    public static final String predatum = "datum";
     private static final String prefOsszeg = "osszeg";
 
     @Override
@@ -38,6 +41,7 @@ public class Rogzites_oldal extends AppCompatActivity {
         ButterKnife.bind(this);
 
         megjegy = (EditText)findViewById(R.id.et_kiegeszito_megjegy);
+        datum = (TextView)findViewById(R.id.tw_datum);
         osszeg = (EditText) findViewById(R.id.et_osszeg);
         button = (Button) findViewById(R.id.bt_kuldes);
         final Spinner staticSpinner = (Spinner) findViewById(R.id.sp_spinner);
@@ -47,11 +51,12 @@ public class Rogzites_oldal extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 Toast.makeText(getApplicationContext(),
-                        staticSpinner.getSelectedItem().toString() + "  " + megjegy.getText().toString() +
+                        staticSpinner.getSelectedItem().toString() + " " + megjegy.getText().toString() +
                                 " " + osszeg.getText().toString(),  Toast.LENGTH_LONG).show();
 
                 Tranzakcio tr = new Tranzakcio(tranzakcioTipus, megjegy.getText().toString(),
-                        staticSpinner.getSelectedItem().toString(), Integer.parseInt(osszeg.getText().toString()));
+                        staticSpinner.getSelectedItem().toString(), datum.getText().toString(),
+                        Integer.parseInt(osszeg.getText().toString()));
 
                             FileMuvelet.Kiir(tr, getApplicationContext());
             }
