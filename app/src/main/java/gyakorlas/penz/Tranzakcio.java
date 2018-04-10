@@ -1,16 +1,25 @@
 package gyakorlas.penz;
 
-import java.util.Arrays;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 
+@Entity
 public class Tranzakcio {
 
     public static final boolean BEVETEL = true;
     public static final boolean KIADAS = false;
+
+    @PrimaryKey
+    int id;
     private Boolean tipus;
     private String megjegy;
     private String kategoria;
     private String datum;
     private int osszeg;
+
+    public Tranzakcio(){
+
+    }
 
     public Tranzakcio(Boolean tipus, String megjegyzes, String spinerEredmeny, String datum, int osszeg) {
         this.tipus = tipus;
@@ -70,6 +79,14 @@ public class Tranzakcio {
 
     public void setOsszeg(int osszeg) {
         this.osszeg = osszeg;
+    }
+
+    public void setDatum(String datum) {
+        this.datum = datum;
+    }
+
+    public void setMegjegy(String megjegy) {
+        this.megjegy = megjegy;
     }
 }
 
