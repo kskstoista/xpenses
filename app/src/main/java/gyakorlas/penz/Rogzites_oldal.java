@@ -58,7 +58,8 @@ public class Rogzites_oldal extends AppCompatActivity {
                         staticSpinner.getSelectedItem().toString(), datum.getText().toString(),
                         Integer.parseInt(osszeg.getText().toString()));
 
-                            FileMuvelet.Kiir(tr, getApplicationContext());
+                AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
+                db.tranzakcioDao().AddTranzakcio(tr);
             }
         });
 

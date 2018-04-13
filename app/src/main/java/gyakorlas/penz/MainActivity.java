@@ -47,8 +47,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        ArrayList<Tranzakcio> data = FileMuvelet.Kiolvas(getApplicationContext());
-        listAdapter.refressDateSet(data);
+        AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
+
+        ArrayList<Tranzakcio> tranzakcioslista = new ArrayList<Tranzakcio>(db.tranzakcioDao().getAllTranzakcio());
+
+        listAdapter.refressDateSet(tranzakcioslista);
 
     }
 
@@ -58,7 +61,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        listAdapter = new TranzakcioAdapter(FileMuvelet.Kiolvas(getApplicationContext()));
+        AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
+
+        ArrayList<Tranzakcio> tranzakcioslista = new ArrayList<Tranzakcio>(db.tranzakcioDao().getAllTranzakcio());
+
+        listAdapter = new TranzakcioAdapter(tranzakcioslista);
 
         RecyclerView list = (RecyclerView) findViewById(R.id.rv_recycler_view);
 
@@ -68,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
         list.setLayoutManager(layoutManager);
         list.setAdapter(listAdapter);
-
-
-        ArrayList<Tranzakcio> lista = FileMuvelet.Kiolvas(getApplicationContext());
-        Log.e ("ezt olvastuk ki: " , lista.toString());
+        
         }
 }
