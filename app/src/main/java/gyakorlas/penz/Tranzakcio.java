@@ -21,26 +21,13 @@ public class Tranzakcio {
 
     }
 
-    public Tranzakcio(Boolean tipus, String megjegyzes, String spinerEredmeny, String datum, int osszeg) {
+    public Tranzakcio(int sorszam, Boolean tipus, String megjegyzes, String spinerEredmeny, String datum, int osszeg) {
+        this.id = sorszam;
         this.tipus = tipus;
         this.megjegy = megjegyzes;
         this.kategoria = spinerEredmeny;
         this.datum = datum;
         this.osszeg = osszeg;
-    }
-
-    public Tranzakcio(String tranzakcioRekord) {
-
-        String[] elements = tranzakcioRekord.split(":");
-        if (elements[0].equals("true")) {
-            this.tipus = true;
-        } else {
-            this.tipus = false;
-        }
-        this.megjegy = elements[1];
-        this.kategoria = elements[2];
-        this.datum = elements[3];
-        this.osszeg = Integer.parseInt(elements[4]);
     }
 
     public String toString() {

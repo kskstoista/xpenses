@@ -53,12 +53,13 @@ public class Rogzites_oldal extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),
                         staticSpinner.getSelectedItem().toString() + " " + megjegy.getText().toString() +
                                 " " + osszeg.getText().toString(),  Toast.LENGTH_LONG).show();
+                AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
 
-                Tranzakcio tr = new Tranzakcio(tranzakcioTipus, megjegy.getText().toString(),
+                Tranzakcio tr = new Tranzakcio(db.tranzakcioDao().getNumberoftransactions(),
+                        tranzakcioTipus, megjegy.getText().toString(),
                         staticSpinner.getSelectedItem().toString(), datum.getText().toString(),
                         Integer.parseInt(osszeg.getText().toString()));
 
-                AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
                 db.tranzakcioDao().AddTranzakcio(tr);
             }
         });

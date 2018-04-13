@@ -17,6 +17,9 @@ public interface TranzakcioDAO {
     @Query("select * from tranzakcio")
     public List<Tranzakcio> getAllTranzakcio();
 
+    @Query("select count (*) from tranzakcio")
+    public int getNumberoftransactions();
+
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateTranzakcio(Tranzakcio tranzakcio);
 
