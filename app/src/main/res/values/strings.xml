@@ -2,10 +2,10 @@
     <string name="app_name">Penz</string>
     <string name="Welcome">Üdvözlő szöveg helye</string>
     <string name="kiadas">Kiadás oldal</string>
-    <string name="bevetel">Bevétel oldal</string>
+    <string name="bevetel">Tovább a rögzités oldalra </string>
     <string name="osszesito">Összesítő helye</string>
     <string name="reszletes_osszesito">Részletes összesítés</string>
-    <string name="send">Küldés</string>
+    <string name="send">Rögzités</string>
     <string name="reszletes_osszesito_helye">részletes összesítő helye</string>
     <string name="osszeg">Összeg:</string>
 
@@ -17,6 +17,8 @@
     <string name="kategory">kategoria</string>
     <string name="datum">Dátum</string>
     <string name="datumhelye">Dátum Helye</string>
+    <string name="plusz">+</string>
+    <string name="minusz">-</string>
 
     <string-array name="kiadas_lista">
         <item>Lakbér</item>

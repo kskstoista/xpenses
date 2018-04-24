@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/small"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/minusz"
+        android:id="@+id/lista_minisz"
+        android:gravity="center"
+        android:textColor="@color/red"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/megjegyzes"
+        android:id="@+id/lista_megjegyzes_minusz"
+        android:gravity="center"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/kategoria"
+        android:id="@+id/lista_kategoria_minusz"
+        android:gravity="center"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/osszeg"
+        android:id="@+id/lista_osszeg_minusz"
+        android:gravity="center"
+        android:textColor="@color/red"/>
+</LinearLayout>

@@ -7,25 +7,41 @@
     android:orientation="vertical"
     tools:context="gyakorlas.penz.Rogzites_oldal">
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/oldal"
-        android:id="@+id/tv_oldal_fejlec"
-        android:layout_margin="@dimen/big"
-        android:layout_gravity="center"
-        android:textSize="@dimen/big"/>
-
-
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sp_spinner"
-        android:layout_margin="@dimen/big"
-        >
-
+        android:layout_margin="@dimen/big">
     </Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <ImageButton
+            android:id="@+id/ib_plusz"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/big"
+            android:background="@color/white"
+            android:scaleType="fitEnd"
+            android:src="@drawable/add_button_th" />
+
+        <ImageButton
+            android:id="@+id/ib_minusz"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:scaleType="fitEnd"
+            android:src="@drawable/remove_button_th" />
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_kiegeszito_megjegy"
-            android:layout_margin="@dimen/big"
+            android:layout_margin="@dimen/small"
             />
     </LinearLayout>
 

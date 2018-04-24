@@ -53,7 +53,7 @@ public class TranzakcioAdapter extends RecyclerView.Adapter<TranzakcioAdapter.Vi
     @Override
     public TranzakcioAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         this.v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_row, parent, false);
+                .inflate(R.layout.list_row_plusz, parent, false);
         return new TranzakcioAdapter.ViewHolder(v);
     }
 
