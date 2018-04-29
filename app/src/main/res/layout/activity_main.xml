@@ -15,15 +15,12 @@
         android:gravity="center"
         android:layout_margin="@dimen/big"/>
 
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bevetel"
-            android:id="@+id/bt_bevetel"
-            android:layout_gravity="center"/>
-
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/rogzites"
+        android:id="@+id/bt_rogzites"/>
 
     <View
         android:layout_width="match_parent"

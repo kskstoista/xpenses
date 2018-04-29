@@ -19,29 +19,19 @@ public class MainActivity extends AppCompatActivity {
 
     TranzakcioAdapter listAdapter;
 
-
-    @OnClick(R.id.bt_bevetel)
-    public void bevetel(){
-
-        Intent i = new Intent(this, Rogzites_oldal.class);
-        i.putExtra("tipus", "bevetel");
-        startActivityForResult(i,0);
-    }
-
-    @OnClick(R.id.bt_kiadas)
-    public void kiadas(){
-
-        Intent i = new Intent(this, Rogzites_oldal.class);
-        i.putExtra("tipus", "kiadas");
-        startActivityForResult(i,0);
-    }
-
     @OnClick(R.id.tw_reszletes_osszesito_tovabb_gomb)
     public void reszletes(){
 
         Intent i = new Intent(this, Reszletes_osszesito_oldal.class);
         i.putExtra("eredmeny", "elsŐ");
         startActivityForResult(i,0);
+    }
+
+    @OnClick(R.id.bt_rogzites)
+    public void ugrasRogzitesOldalra(){
+
+        Intent i = new Intent(this, Rogzites_oldal.class);
+        startActivity(i);
     }
 
     @Override
